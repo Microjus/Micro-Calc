@@ -1,0 +1,203 @@
+
+  
+#!usr/bin/env bash
+
+# Autor: Microjus - Dark-Shell 
+# Criaçao: 01/12/2021
+# Script simples escrito em bash que calcula
+# Adição, divisao, subtraçao 
+# Multiplicaçao e raiz quadrada.
+
+
+function menu() {
+	
+	clear
+
+	echo "|-----------------------|"
+	echo "|                       |"
+	echo "|   MICRO CALCULATOR    |"
+	echo "|                       |"
+	echo "|-----------------------|"
+	echo
+	echo "[ 1 ] - Adição"
+	echo "[ 2 ] - Divisão"
+	echo "[ 3 ] - Subtração"
+	echo "[ 4 ] - Multiplicação"
+	echo "[ 5 ] - Raiz quadrada"
+	echo "[ 0 ] - Sair"
+	echo
+	read -p "[+] Digite uma opção: " opcao
+	
+	case $opcao in 
+		
+		1) adicao ;;
+		2) divisao ;;
+		3) subtracao ;;
+		4) multiplicacao ;;
+		5) raiz ;;
+		0) clear ; echo "Bay!!! :)" ; sleep 1 ; clear ; exit ;;
+		*)
+		clear ; echo "[+] Opção Invalida!" ; sleep 1 ; clear ; menu
+		esac
+
+}
+
+function menu2() {
+	
+	echo
+	echo "[1] - Menu principal"
+	echo "[2] - Continuar"
+	echo "[3] - Sair"
+	echo
+}
+
+function adicao() {
+
+	clear
+	read -p "[+] Digite um numero: " num1
+	read -p "[+] Digite o numero a ser somado: " num2
+	adicao=$(( $num1 + $num2 ))
+	clear
+	echo "|  O resultado é: $adicao  |"
+	menu2
+	read -p "[+] Digite uma opção: " option
+
+if [ "$option" = 1 ] 
+	then
+	
+	menu
+
+elif [ "$option" = 2 ] 
+	then
+
+	adicao
+       
+elif [ "$option" = 3 ] 
+	then
+	clear ; echo "Bay!!! :)" ; sleep 1 ; clear ; exit 
+	else 
+       	clear ; echo "[+] Opção Invalida!" ; sleep 1 ; clear ; menu
+	fi
+}
+
+function multiplicacao() {
+
+
+	clear
+	read -p "[+] Digite um numero: " num0
+	read -p "[+] Digite o numero a ser multiplicado: " num00
+	multiplicacao=$(( $num0 * $num00 ))
+	clear
+	echo "|  O resultado é: $multiplicacao  |"
+	menu2
+	read -p "[+] Digite uma opção: " option0
+
+if [ "$option0" = 1 ] 
+	then
+	
+	menu
+
+elif [ "$option0" = 2 ] 
+	then
+
+	multiplicacao
+       
+elif [ "$option0" = 3 ] 
+	then
+	clear ; echo "Bay!!! :)" ; sleep 1 ; clear ; exit 
+	else 
+       	clear ; echo "[+] Opção Invalida!" ; sleep 1 ; clear ; menu
+	fi
+
+
+}
+
+function divisao() {
+
+	clear
+	read -p "[+] Digite um numero: " num3
+	read -p "[+] Digite outro numero: " num4
+	divisao=$(( $num3 / $num4 ))
+	clear
+	echo "|  O resultado da divisao é: $divisao  |"
+	menu2
+	read -p "[+] Digite uma opção: " option2
+
+if [ "$option2 " = 1 ] 
+	then
+	
+	menu
+
+elif [ "$option2" = 2 ] 
+	then
+
+	divisao
+       
+elif [ "$option2" = 3 ] 
+	then
+	clear ; echo "Bay!!! :)" ; sleep 1 ; clear ; exit 
+	else
+	clear ; echo "[+] Opção Invalida!" ; sleep 1 ; menu 
+	fi
+
+}
+
+function subtracao() {
+
+	clear
+	read -p "[+] Digite um numero: " num5
+	read -p "[+] Digite um numero a ser subtraido: " num6
+	subtracao=$(( $num5 - $num6 ))
+	clear
+	echo "|  O resultado da subtraçao é: $subtracao  |"
+	menu2
+	read -p "[+] Digite uma opção: " option3
+
+if [ "$option3 " = 1 ] 
+	then
+	
+	menu
+
+elif [ "$option3" = 2 ] 
+	then
+
+	subtracao
+       
+elif [ "$option3" = 3 ] 
+	then
+	clear ; echo "Bay!!! :)" ; sleep 1 ; clear ; exit 
+	else 
+	clear ; echo "[+] Opção Invalida!" ; sleep 1 ; clear ; menu
+	fi
+
+}
+
+function raiz() {
+
+	clear
+	read -p "[+] Digite um numero: " num7
+	raiz=$(echo "$num7" | awk '{print sqrt($1)}')
+	clear
+ 	echo "|  A raiz quadrada de $num7 é: $raiz  |"
+	menu2
+	read -p "[+] Digite uma opção: " option8
+
+if [ "$option8" = 1 ] 
+	then
+
+	menu
+
+elif [ "$option8" = 2 ] 
+	then
+
+	raiz
+       
+elif [ "$option8" = 3 ] 
+	then	
+	clear ; echo "Bay!!! :)" ; sleep 1 ; clear ; exit 
+	else 
+	clear ; echo "[+] Opção Invalida!" ; sleep 1 ; clear ; menu
+	fi
+}
+
+menu
