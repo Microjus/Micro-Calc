@@ -42,10 +42,10 @@ function menu() {
 
 function menu2() {
 	
-	echo "
+	echo '
 	[1] - Menu principal"
 	[2] - Continuar"
-	[3] - Sair" 
+	[3] - Sair'
 }
 
 function adicao() {
