@@ -6,6 +6,24 @@
 # Adição, divisao, subtraçao 
 # Multiplicaçao e raiz quadrada.
 
+#-------------------------------TESTES-----------------------------------------|
+
+# Verifica se o usiario é administrador do sistema.
+
+[[ "$UID" -ne "$ROOT_UID" ]] && { printf "\033cE: Execute como adminstrador." ; exit $NOT_ROOT ; }
+
+#------------------------------------------------------------------------------|
+
+trap ctrl_c INT
+
+ctrl_c() {
+
+        clear ; printf "[+] (Ctrl + C ) Detectado, Tentativa de saida ...\n" ; sleep 2s
+        printf "\n[+] Encerrando serviços , Aguarde  ...\n"
+        # Funçao de encerramento
+        printf '\n[+] Obrigado por usar este programa  =).'
+        exit 1 
+}
 
 function menu() {
 	
