@@ -10,7 +10,7 @@
 
 declare -r ROOT_UID=0    # Somente usuários com $UID 0 têm privilégios de administrador.
 declare -r NOT_ROOT=87   # Codigo de saida de erro para usuarios nao administrador.
-declare -r NOT_FOUND=404 # Codigo de saidade  erro para programa nao encontrado.
+declare -r NOT_FOUND=404 # Codigo de saida de erro para programa nao encontrado.
 
 #-------------------------------TESTES-----------------------------------------|
 
@@ -46,24 +46,22 @@ function menu() {
 	[ 5 ] - Raiz quadrada
 	[ 0 ] - Sair
 	'
-	read -p -r '[+] Digite uma opção: ' opcao
+	read -r -p '[+] Digite uma opção: ' opt
 	
-	case $opcao in 
+	case $opt in 
 		
-		1) adicao ;;
-		2) divisao ;;
-		3) subtracao ;;
-		4) multiplicacao ;;
+		1) adc ;;
+		2) div ;;
+		3) subtr ;;
+		4) mult ;;
 		5) raiz ;;
 		0) clear ; echo "Bay!!! :)" ; sleep 1 ; clear ; exit ;;
 		*)
 		clear ; echo "[+] Opção Invalida!" ; sleep 1 ; clear ; menu
 		esac
-
 }
 
 function menu2() {
-	
 	echo '
 	[1] - Menu principal"
 	[2] - Continuar"
@@ -71,14 +69,12 @@ function menu2() {
 	'
 }
 
-function adicao() {
-
-	clear
-	read -p "[+] Digite um numero: " num1
+function adc() {
+	clear ; read -p "[+] Digite um numero: " num1
 	read -p "[+] Digite o numero a ser somado: " num2
-	adicao=$(( $num1 + $num2 ))
+	adc=$(( $num1 + $num2 ))
 	clear
-	echo "|  O resultado é: $adicao  |"
+	echo "|  O resultado é: $adc  |"
 	menu2
 	read -p "[+] Digite uma opção: " option
 
@@ -90,7 +86,7 @@ if [ "$option" = 1 ]
 elif [ "$option" = 2 ] 
 	then
 
-	adicao
+	adc
        
 elif [ "$option" = 3 ] 
 	then
@@ -100,11 +96,8 @@ elif [ "$option" = 3 ]
 	fi
 }
 
-function multiplicacao() {
-
-
-	clear
-	read -p "[+] Digite um numero: " num0
+function mult() {
+	clear ; read -r -p '[+] Digite um numero: ' num0
 	read -p "[+] Digite o numero a ser multiplicado: " num00
 	multiplicacao=$(( $num0 * $num00 ))
 	clear
