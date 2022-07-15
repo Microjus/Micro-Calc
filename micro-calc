@@ -10,7 +10,7 @@
 
 # Verifica se o usiario é administrador do sistema.
 
-[[ "$UID" -ne "$ROOT_UID" ]] && { printf "\033cE: Execute como adminstrador." ; exit $NOT_ROOT ; }
+[[ "$UID" -ne "$ROOT_UID" ]] && { printf "\033cE: Execute como adminstrador." ; exit "$NOT_ROOT" ; }
 
 #------------------------------------------------------------------------------|
 
