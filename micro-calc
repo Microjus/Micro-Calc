@@ -29,19 +29,20 @@ function menu() {
 	
 	clear
 
-	echo "|-----------------------|"
-	echo "|                       |"
-	echo "|   MICRO CALCULATOR    |"
-	echo "|                       |"
-	echo "|-----------------------|"
-	echo
-	echo "[ 1 ] - Adição"
-	echo "[ 2 ] - Divisão"
-	echo "[ 3 ] - Subtração"
-	echo "[ 4 ] - Multiplicação"
-	echo "[ 5 ] - Raiz quadrada"
-	echo "[ 0 ] - Sair"
-	echo
+	echo ' 
+	|-----------------------|
+	|                       |
+	|   MICRO CALCULATOR    |
+	|                       |
+	|-----------------------|
+	
+	[ 1 ] - Adição
+	[ 2 ] - Divisão
+	[ 3 ] - Subtração
+	[ 4 ] - Multiplicação
+	[ 5 ] - Raiz quadrada
+	[ 0 ] - Sair
+	'
 	read -p "[+] Digite uma opção: " opcao
 	
 	case $opcao in 
