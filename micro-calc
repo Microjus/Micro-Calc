@@ -67,15 +67,6 @@ function enc() {
 	clear ; printf "\33c[+] Obrigado por usar este programa!" ; sleep 1s ; exit 0
 }
 
-function menu2() {
-
-	echo '
-	[1] - Menu principal"
-	[2] - Repetir"
-	[3] - Sair
-	'
-}
-
 function adc() {
 
 	clear ; read -r -p '[+] Digite um numero: ' num1
@@ -84,25 +75,7 @@ function adc() {
 		adc=$(( $num1 + $num2 ))
 	
 	printf "\33c|  O resultado é: $adc  |"
-	menu2
-	read -p "[+] Digite uma opção: " option
-
-if [ "$option" = 1 ] 
-	then
-	
-	menu
-
-elif [ "$option" = 2 ] 
-	then
-
-	adc
-       
-elif [ "$option" = 3 ] 
-	then
-	enc
-	else 
-       	clear ; echo "[+] Opção Invalida!" ; sleep 1 ; clear ; menu
-	fi
+	printf 'Pressione ENTER:' ; read -s ; menu
 }
 
 function mult() {
@@ -112,26 +85,7 @@ function mult() {
 	multiplicacao=$(( $num1 * $num2 ))
 	clear
 	echo "|  O resultado é: $multiplicacao  |"
-	menu2
-	read -p "[+] Digite uma opção: " option0
-
-if [ "$option0" = 1 ] 
-	then
-	
-	menu
-
-elif [ "$option0" = 2 ] 
-	then
-
-	multiplicacao
-       
-elif [ "$option0" = 3 ] 
-	then
-	clear ; echo "Bay!!! :)" ; sleep 1 ; clear ; exit 
-	else 
-       	clear ; echo "[+] Opção Invalida!" ; sleep 1 ; clear ; menu
-	fi
-
+	printf 'Pressione ENTER:' ; read -s ; menu
 
 }
 
@@ -143,26 +97,7 @@ function divisao() {
 	divisao=$(( $num1 / $num2 ))
 	clear
 	echo "|  O resultado da divisao é: $divisao  |"
-	menu2
-	read -p "[+] Digite uma opção: " option2
-
-if [ "$option2 " = 1 ] 
-	then
-	
-	menu
-
-elif [ "$option2" = 2 ] 
-	then
-
-	divisao
-       
-elif [ "$option2" = 3 ] 
-	then
-	clear ; echo "Bay!!! :)" ; sleep 1 ; clear ; exit 
-	else
-	clear ; echo "[+] Opção Invalida!" ; sleep 1 ; menu 
-	fi
-
+	printf 'Pressione ENTER:' ; read -s ; menu
 }
 
 function subtracao() {
@@ -173,26 +108,7 @@ function subtracao() {
 	subtracao=$(( $num1 - $num2 ))
 	clear
 	echo "|  O resultado da subtraçao é: $subtracao  |"
-	menu2
-	read -p "[+] Digite uma opção: " option3
-
-if [ "$option3 " = 1 ] 
-	then
-	
-	menu
-
-elif [ "$option3" = 2 ] 
-	then
-
-	subtracao
-       
-elif [ "$option3" = 3 ] 
-	then
-	clear ; echo "Bay!!! :)" ; sleep 1 ; clear ; exit 
-	else 
-	clear ; echo "[+] Opção Invalida!" ; sleep 1 ; clear ; menu
-	fi
-
+	printf 'Pressione ENTER:' ; read -s ; menu
 }
 
 function raiz() {
@@ -202,25 +118,7 @@ function raiz() {
 	raiz=$(echo "$num1" | awk '{print sqrt($1)}')
 	clear
  	echo "|  A raiz quadrada de $num1 é: $raiz  |"
-	menu2
-	read -p "[+] Digite uma opção: " option8
-
-if [ "$option8" = 1 ] 
-	then
-
-	menu
-
-elif [ "$option8" = 2 ] 
-	then
-
-	raiz
-       
-elif [ "$option8" = 3 ] 
-	then	
-	enc
-	else 
-	clear ; echo "[+] Opção Invalida!" ; sleep 1 ; clear ; menu
-	fi
+	printf 'Pressione ENTER:' ; read -s ; menu
 }
 
 menu
