@@ -27,7 +27,7 @@ ctrl_c() {
         printf "\33c[+] (Ctrl + C ) Detectado, Tentativa de saida ...\n" ; sleep 2s
         printf "\n[+] Encerrando serviços , Aguarde  ...\n"
         # Funçao de encerramento
-        printf '\n[+] Obrigado por usar este programa  =).'
+        printf "\n[+] Obrigado por usar este programa  =).\n"
         exit 1 
 }
 
@@ -74,7 +74,7 @@ function adc() {
 	
 		adc=$(( $num1 + $num2 ))
 	
-	printf "\33c|  O resultado é: $adc  |"
+	printf "\33c|  O resultado é: $adc  |\n"
 	printf 'Pressione ENTER:' ; read -s ; menu
 }
 
