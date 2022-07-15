@@ -1,4 +1,4 @@
-#!usr/bin/env bash
+#!/usr/bin/env bash
 
 # Autor: Microjus - Dark-Shell 
 # Criaçao: 01/12/2021
@@ -26,10 +26,7 @@ ctrl_c() {
 }
 
 function menu() {
-	
-	clear
-
-	echo ' 
+	clear ; echo '
 	|-----------------------|
 	|                       |
 	|   MICRO CALCULATOR    |
@@ -43,7 +40,7 @@ function menu() {
 	[ 5 ] - Raiz quadrada
 	[ 0 ] - Sair
 	'
-	read -p "[+] Digite uma opção: " opcao
+	read -p -r "[+] Digite uma opção: " opcao
 	
 	case $opcao in 
 		
