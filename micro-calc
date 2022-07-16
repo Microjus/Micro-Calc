@@ -74,9 +74,32 @@ function adc() {
 	
 		adc=$(( $num1 + $num2 ))
 	
-	printf "\33c|  O resultado é: $adc  |"
+	printf "\33c|  O resultado é: $adc  |\n"
 	printf "\n Pressione ENTER:" ; read -s ; menu
 }
+
+function div() {
+
+	clear ; read -r -p '[+] Digite um numero: ' num1
+	read -r -p '[+] Digite outro numero: ' num1
+	
+		div=$(( $num1 / $num2 ))
+	
+	printf "\33c|  O resultado é: $div  |\n"
+	printf "\n Pressione ENTER:" ; read -s ; menu
+}
+
+function subtr() {
+
+	clear ; read -p "[+] Digite um numero: " num1
+	read -p "[+] Digite um numero a ser subtraido: " num2
+		
+		subtr=$(( $num1 - $num2 ))
+	
+	printf "\33c|  O resultado é: $subtr  |\n"
+	printf "\n Pressione ENTER:" ; read -s ; menu
+}
+
 
 function mult() {
 
@@ -89,28 +112,6 @@ function mult() {
 	printf "\n Pressione ENTER:" ; read -s ; menu
 }
 
-function div() {
-
-	clear ; read -r -p '[+] Digite um numero: ' num1
-	read -r -p '[+] Digite outro numero: ' num1
-	
-		div=$(( $num1 / $num2 ))
-	
-	printf "\33c|  O resultado da divisao é: $div  |\n"
-	printf 'Pressione ENTER:' ; read -s ; menu
-}
-
-function subtr() {
-
-	clear ; read -p "[+] Digite um numero: " num1
-	read -p "[+] Digite um numero a ser subtraido: " num2
-		
-		subtr=$(( $num1 - $num2 ))
-	
-	printf "\33c|  O resultado da subtraçao é: $subtr  |\n"
-	printf 'Pressione ENTER:' ; read -s ; menu
-}
-
 function raiz() {
 
 	clear ; read -r -p '[+] Digite um numero: ' num1
@@ -118,7 +119,7 @@ function raiz() {
 		raiz=$(echo "$num1" | awk '{print sqrt($1)}')
  	
 	printf "\33c|  A raiz quadrada de $num1 é: $raiz  |\n"
-	printf 'Pressione ENTER:' ; read -s ; menu
+	printf "\nPressione ENTER:" ; read -s ; menu
 }
 
 menu
