@@ -72,7 +72,7 @@ function adc() {
 	clear ; read -r -p '[+] Digite um numero: ' num1
 	read -r -p '[+] Digite o numero a ser somado: ' num2
 	
-		adc=(( $num1 + $num2 ))
+		adc=$(( $num1 + $num2 ))
 	
 	printf "\33c|  O resultado é: $adc  |"
 	printf "\nPressione ENTER:" ; read -s ; menu
@@ -86,7 +86,7 @@ function mult() {
 		mult=$(( $num1 * $num2 ))
 	
 	printf "\33c|  O resultado é: $mult  |\n"
-	printf 'Pressione ENTER:' ; read -s ; menu
+	printf "\nPressione ENTER:" ; read -s ; menu
 }
 
 function div() {
