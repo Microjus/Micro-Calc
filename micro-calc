@@ -56,7 +56,7 @@ function menu() {
 		3) subtr ;;
 		4) mult ;;
 		5) raiz ;;
-		0) enc;;
+		0) enc ;;
 		*)
 		printf "\33c[+] Opção Invalida!" ; sleep 1 ; menu
 		esac
@@ -75,7 +75,7 @@ function adc() {
 		adc=(( $num1 + $num2 ))
 	
 	printf "\33c|  O resultado é: $adc  |\n"
-	printf "\nPressione ENTER:" && read -s ; menu
+	printf "\nPressione ENTER:" ; read -s ; menu
 }
 
 function mult() {
