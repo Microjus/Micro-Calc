@@ -81,7 +81,7 @@ function adc() {
 function div() {
 
 	clear ; read -r -p '[+] Digite um numero: ' num1
-	read -r -p '[+] Digite outro numero: ' num1
+	read -r -p '[+] Digite outro numero: ' num2
 	
 		div=$(( $num1 / $num2 ))
 	
