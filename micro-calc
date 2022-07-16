@@ -74,8 +74,9 @@ function adc() {
 	
 		adc=(( $num1 + $num2 ))
 	
-	printf "\33c|  O resultado é: $adc  |"
-	printf "\nPressione ENTER:" ; read -s ; menu
+	printf "\33c|  O resultado é: $adc  |\n"
+	printf "\nPressione ENTER:"
+	read -s ; menu
 }
 
 function mult() {
