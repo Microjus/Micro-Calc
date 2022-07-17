@@ -90,7 +90,7 @@ function subtr() {
 		
 		subtr=$(( num1 - num2 ))
 	
-	printf "\33c|  O resultado é: %s\n" "$subtr  |"
+	printf "\33c|  O resultado da subtração é: %s\n" "$subtr  |"
 	printf "\n Pressione ENTER:" ; read -s ; menu
 }
 
