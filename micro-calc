@@ -75,7 +75,7 @@ function adc() {
 function div() {
 
 	clear ; read -r -p '[+] Digite um numero: ' num1
-	read -r -p '[+] Digite outro numero: ' num2
+	read -r -p '[+] Digite o numero para dividir: ' num2
 	
 		div=$(( num1 / num2 ))
 	
@@ -102,7 +102,7 @@ function mult() {
 	
 		mult=$(( num1 * num2 ))
 		
-	printf "\33c|  O resultado é: %s\n" "$mult  |"
+	printf "\33c|  O resultado da multiplicação é: %s\n" "$mult  |"
 	printf "\n Pressione ENTER:" ; read -s ; menu
 }
 
