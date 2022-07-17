@@ -113,7 +113,7 @@ function raiz() {
 		raiz=$(echo "$num1" | awk '{print sqrt($1)}')
  	
 	printf "\33c|  A raiz quadrada de %s\n" "$num1 é: $raiz  |"
-	printf "\nPressione ENTER:" ; read -s ; menu
+	printf "\nPressione ENTER:" ; read -r -s ; menu
 }
 
 function enc() {
