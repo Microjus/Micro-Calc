@@ -78,7 +78,7 @@ function div() {
 	clear ; read -r -p '[+] Digite um numero: ' num1
 	read -r -p '[+] Digite outro numero: ' num2
 	
-		div=$(( num1 / $num2 ))
+		div=$(( num1 / num2 ))
 	
 	printf "\33c|  O resultado é: %s\n" "$div  |"
 	printf "\n Pressione ENTER:" ; read -s ; menu
