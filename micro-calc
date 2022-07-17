@@ -69,7 +69,7 @@ function adc() {
 		adc=$(( num1 + num2 ))
 		
 	printf "\33c|  O resultado da soma é: %s\n" "$adc  |"
-	printf "\n Pressione ENTER:" ; read -s ; menu
+	printf "\n Pressione ENTER:" ; read -r -s ; menu
 }
 
 function div() {
@@ -80,7 +80,7 @@ function div() {
 		div=$(( num1 / num2 ))
 	
 	printf "\33c|  O resultado da divisão é: %s\n" "$div  |"
-	printf "\n Pressione ENTER:" ; read -s ; menu
+	printf "\n Pressione ENTER:" ; read -r -s ; menu
 }
 
 function subtr() {
@@ -91,7 +91,7 @@ function subtr() {
 		subtr=$(( num1 - num2 ))
 	
 	printf "\33c|  O resultado da subtração é: %s\n" "$subtr  |"
-	printf "\n Pressione ENTER:" ; read -s ; menu
+	printf "\n Pressione ENTER:" ; read -r -s ; menu
 }
 
 
@@ -103,7 +103,7 @@ function mult() {
 		mult=$(( num1 * num2 ))
 		
 	printf "\33c|  O resultado da multiplicação é: %s\n" "$mult  |"
-	printf "\n Pressione ENTER:" ; read -s ; menu
+	printf "\n Pressione ENTER:" ; read -r -s ; menu
 }
 
 function raiz() {
