@@ -28,7 +28,7 @@ ctrl_c() {
         printf "\n[+] Encerrando serviços , Aguarde  ...\n"
         # Funçao de encerramento
         printf "\n[+] Obrigado por usar este programa  =).\n"
-        exit 1 
+        exit 0
 }
 
 function menu() {
@@ -62,19 +62,14 @@ function menu() {
 		esac
 }
 
-function enc() {
-
-	clear ; printf "\33c[+] Obrigado por usar este programa!" ; sleep 1s ; exit 0
-}
-
 function adc() {
 
 	clear ; read -r -p '[+] Digite um numero: ' num1
 	read -r -p '[+] Digite o numero a ser somado: ' num2
 	
 		adc=$(( num1 + num2 ))
-	
-	printf "\33c|  O resultado é: $adc  |\n"
+		
+	printf "\33c|  O resultado é: %s\n" "$mult  |"
 	printf "\n Pressione ENTER:" ; read -s ; menu
 }
 
@@ -83,20 +78,20 @@ function div() {
 	clear ; read -r -p '[+] Digite um numero: ' num1
 	read -r -p '[+] Digite outro numero: ' num2
 	
-		div=$(( $num1 / $num2 ))
+		div=$(( num1 / $num2 ))
 	
-	printf "\33c|  O resultado é: $div  |\n"
+	printf "\33c|  O resultado é: %s\n" "$div  |"
 	printf "\n Pressione ENTER:" ; read -s ; menu
 }
 
 function subtr() {
 
-	clear ; read -p "[+] Digite um numero: " num1
-	read -p "[+] Digite um numero a ser subtraido: " num2
+	clear ; read -r -p "[+] Digite um numero: " num1
+	read -r -p "[+] Digite um numero a ser subtraido: " num2
 		
-		subtr=$(( $num1 - $num2 ))
+		subtr=$(( num1 - num2 ))
 	
-	printf "\33c|  O resultado é: $subtr  |\n"
+	printf "\33c|  O resultado é: %s\n" "$subtr  |"
 	printf "\n Pressione ENTER:" ; read -s ; menu
 }
 
@@ -106,9 +101,9 @@ function mult() {
 	clear ; read -r -p '[+] Digite um numero: ' num1
 	read -r -p '[+] Digite o numero a ser multiplicado: ' num2
 	
-		mult=$(( $num1 * $num2 ))
-	
-	printf "\33c|  O resultado é: $mult  |\n"
+		mult=$(( num1 * num2 ))
+		
+	printf "\33c|  O resultado é: %s\n" "$mult  |"
 	printf "\n Pressione ENTER:" ; read -s ; menu
 }
 
@@ -120,6 +115,12 @@ function raiz() {
  	
 	printf "\33c|  A raiz quadrada de $num1 é: $raiz  |\n"
 	printf "\nPressione ENTER:" ; read -s ; menu
+}
+
+function enc() {
+
+	clear ; printf "\33c[+] Obrigado por usar este programa!\n" ; sleep 1s ; exit 0
+
 }
 
 menu
