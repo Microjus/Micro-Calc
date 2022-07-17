@@ -121,3 +121,5 @@ function enc() {
 	clear ; printf "\33c[+] Obrigado por usar este programa!\n" ; sleep 1s ; exit 0
 
 }
+
+menu
