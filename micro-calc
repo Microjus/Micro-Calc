@@ -10,7 +10,6 @@
 
 declare -r ROOT_UID=0    # Somente usuários com $UID 0 têm privilégios de administrador.
 declare -r NOT_ROOT=87   # Codigo de saida de erro para usuarios nao administrador.
-declare -r NOT_FOUND=404 # Codigo de saida de erro para programa nao encontrado.
 
 #-------------------------------TESTES-----------------------------------------|
 
@@ -69,7 +68,7 @@ function adc() {
 	
 		adc=$(( num1 + num2 ))
 		
-	printf "\33c|  O resultado é: %s\n" "$mult  |"
+	printf "\33c|  O resultado da soma é: %s\n" "$adc  |"
 	printf "\n Pressione ENTER:" ; read -s ; menu
 }
 
@@ -80,7 +79,7 @@ function div() {
 	
 		div=$(( num1 / num2 ))
 	
-	printf "\33c|  O resultado é: %s\n" "$div  |"
+	printf "\33c|  O resultado da divisão é: %s\n" "$div  |"
 	printf "\n Pressione ENTER:" ; read -s ; menu
 }
 
@@ -122,5 +121,3 @@ function enc() {
 	clear ; printf "\33c[+] Obrigado por usar este programa!\n" ; sleep 1s ; exit 0
 
 }
-
-menu
