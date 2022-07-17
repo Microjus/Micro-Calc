@@ -16,7 +16,7 @@ declare -r NOT_FOUND=404 # Codigo de saida de erro para programa nao encontrado.
 
 # Verifica se o usiario é administrador do sistema.
 
-[[ "$UID" -ne "$ROOT_UID" ]] && { printf "\033cE: Execute como adminstrador." ; exit "$NOT_ROOT" ; }
+[[ "$UID" -ne "$ROOT_UID" ]] && { printf "\033cE: Execute como adminstrador.\n" ; exit "$NOT_ROOT" ; }
 
 #------------------------------------------------------------------------------|
 
