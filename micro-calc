@@ -47,7 +47,7 @@ function menu() {
 	[ 5 ] - Raiz quadrada
 	[ 0 ] - Sair
 	'
-	read -r -p '[+] Digite uma opção: ' opt
+	read -r -p '	[+] Digite uma opção: ' opt
 	
 	case $opt in 
 		
@@ -76,9 +76,7 @@ function div() {
 	clear ; read -r -p '[+] Digite um numero: ' num1
 	read -r -p '[+] Digite o numero para dividir: ' num2
 	
-		div=$(( num1 / num2 ))
-	
-	printf "\33c|  O resultado da divisão é: %s\n" "$div  |"
+	printf "\33c|  O resultado da divisão é: %s\n" "$(( num1 / num2 ))  |"
 	printf "\n Pressione ENTER:" ; read -r -s ; menu
 }
 
@@ -86,32 +84,25 @@ function subtr() {
 
 	clear ; read -r -p "[+] Digite um numero: " num1
 	read -r -p "[+] Digite um numero a ser subtraido: " num2
-		
-		subtr=$(( num1 - num2 ))
 	
-	printf "\33c|  O resultado da subtração é: %s\n" "$subtr  |"
+	printf "\33c|  O resultado da subtração é: %s\n" "$(( num1 - num2 ))  |"
 	printf "\n Pressione ENTER:" ; read -r -s ; menu
 }
-
 
 function mult() {
 
 	clear ; read -r -p '[+] Digite um numero: ' num1
 	read -r -p '[+] Digite o numero a ser multiplicado: ' num2
-	
-		mult=$(( num1 * num2 ))
 		
-	printf "\33c|  O resultado da multiplicação é: %s\n" "$mult  |"
+	printf "\33c|  O resultado da multiplicação é: %s\n" "$(( num1 * num2 ))  |"
 	printf "\n Pressione ENTER:" ; read -r -s ; menu
 }
 
 function raiz() {
 
 	clear ; read -r -p '[+] Digite um numero: ' num1
-	
-		raiz=$(echo "$num1" | awk '{print sqrt($1)}')
  	
-	printf "\33c|  A raiz quadrada de %s\n" "$num1 é: $raiz  |"
+	printf "\33c|  A raiz quadrada de %s\n" "$num1 é: $(echo "$num1" | awk '{print sqrt($1)}')  |"
 	printf "\nPressione ENTER:" ; read -r -s ; menu
 }
 
