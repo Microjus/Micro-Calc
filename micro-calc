@@ -66,10 +66,8 @@ function adc() {
 
 	clear ; read -r -p '[+] Digite um numero: ' num1
 	read -r -p '[+] Digite o numero a ser somado: ' num2
-	
-		adc=$(( num1 + num2 ))
 		
-	printf "\33c|  O resultado da soma é: %s\n" "$adc  |"
+	printf "\33c|  O resultado da soma é: %s\n" "$(( num1 + num2 ))  |"
 	printf "\n Pressione ENTER:" ; read -r -s ; menu
 }
 
